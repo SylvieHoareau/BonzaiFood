@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonzai Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <a class="navBranding">
+                <img class="logoHeader" src="assets/logo.png" alt="logo Bonzai Food du header">
+            </a>
+            <div class="topnav" id="myTopnavMenu">
+                <a class="active" href="#header">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#reservation">Réservation</a>
+                <a href="#contact">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Commencer</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <!-- <img src="assets/bars-solid.svg" alt="hamburger"> -->
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+        <div class="headerImageContainer">
+            <div class="carousel">
+                <div class="carouselInner">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="sushis">
+                        <div class="info">
+                            <h2>Votre restaurant japonais</h2>
+                            <p>Sur place ou à emporter</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1608060146923-7b8ab13e22bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="restaurant">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1618889482923-38250401a84e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="bowl">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="chief">
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <i class="fa-solid fa-circle-left" id="prev"></i>
+                    <!-- <button id="prev">Précédent</button>
+                    <button id="next">Suivant</button> -->
+                    <div class="carousel-dots"></div>
+                    <i class="fa-solid fa-circle-right" id="next"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--MENU-->
+    <section class="menu" id="menu">
+        <h1>Menu</h1>
+        <div class="supra-menu-flex-container">
+            <div class="menu-flex-container">
+                <div class="menu-image-flex-container">
+                    <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="plateau de sushi">
+                </div>
+                <div class="detail-menu-flex-container">
+                    <h2>Plateau de sushis</h2>
+                    <p>Riz, algues, oeufs de saumon</p>
+                    <h3>25.00 €</h3>
+                </div>
+                <div class="command-menu-flex-container">
+                    <div class="command-number">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <p>1</p>
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div class="menu-flex-container">
+                <div class="menu-image-flex-container">
+                    <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="nouilles soba">
+                </div>
+                <div  class="detail-menu-flex-container">
+                    <h2>Nouilles Soba</h2>
+                    <p>Nouilles de sarrasin, oeufs, boeuf</p>
+                    <h3>14.50 €</h3>
+                </div>
+                <div class="command-menu-flex-container">
+                    <div class="command-number">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <p>1</p>
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div class="menu-flex-container">
+                <div class="menu-image-flex-container">
+                    <img src="https://images.unsplash.com/photo-1611518040286-9af8ba97ab46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="boeuf wagio">
+                </div>
+                <div  class="detail-menu-flex-container">
+                    <h2>Boeuf Wagio</h2>
+                    <p>Boeuf, nouilles de riz</p>
+                    <h3>35.00 €</h3>
+                </div>
+                <div class="command-menu-flex-container">
+                    <div class="command-number">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <p>1</p>
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div class="menu-flex-container">
+                <div class="menu-image-flex-container">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="nouilles udon">
+                </div>
+                <div  class="detail-menu-flex-container">
+                    <h2>Nouilles Udon</h2>
+                    <p>Nouille de blé, boeufs, crevettes</p>
+                    <h3>16.50 €</h3>
+                </div>
+                <div class="command-menu-flex-container">
+                    <div class="command-number">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <p>1</p>
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <button>Commander</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!--RESERVATION-->
+    <section class="reservation" id="reservation">
+        <h1>Réservation</h1>
+        <div class="form-container">
+            <form>
+                <label for="name">Nom</label>
+                <input type="text" id="name" placeholder="Nom">
+
+                <label for="surname">Prénom</label>
+                <input type="text" id="surname" placeholder="Prénom">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+
+                <label for="telephone">Téléphone portable</label>
+                <input type="tel" id="telephone" placeholder="N° de téléphone">
+
+                <div class="day-flex-container">
+                    <label for="lundi" id="monday">L</label>
+                    <input type="checkbox" name="lundi" id="lundi">
+
+                    <label for="mardi" id="tuesday">M</label>
+                    <input type="checkbox" name="mardi" id="mardi">
+
+                    <label for="mercredi" id="wednesday">M</label>
+                    <input type="checkbox" name="mercredi" id="mercredi">
+
+                    <label for="jeudi" id="thusrday">J</label>
+                    <input type="checkbox" name="jeudi" id="jeudi">
+
+                    <label for="vendredi" id="friday">V</label>
+                    <input type="checkbox" name="vendredi" id="vendredi">
+
+                    <label for="samedi" id="saturday">S</label>
+                    <input type="checkbox" name="samedi" id="samedi">
+
+                    <label for="dimanche" id="sunday">D</label>
+                    <input type="checkbox" name="dimanche" id="dimanche">
+
+                </div>
+                <div class="time-flex-container">
+                    <label for="midi">Midi</label>
+                    <input type="radio" name="midi" id="midi">
+
+                    <label for="soir">Soir</label>
+                    <input type="radio" name="soir" id="soir">
+                </div>
+                <div class="submit-flex-container">
+                    <input type="submit" value="Réserver">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--CONTACT-->
+    <section class="contact" id="contact">
+        <h1>Contact</h1>
+        <div class="contact-flex-container">
+            <div class="infoContact">
+                <p>XX Rue des Ninjas</p>
+                <p>99 999 City</p>
+                <p>0262 00 00 00</p>
+                <p>contact@bonzai-food.com</p>
+            </div>
+            <div class="map-contact">
+                <iframe name="google-maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14872.620990257688!2d55.43608655!3d-21.265321450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1683266040726!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <img class="logo-footer" src="assets/Logo Bonzai Food.png" alt="logo Bonzai Food du footer">
+            <div class="adress">
+                <h1>Contact</h1>
+                <p>XX rue des Ninjas</p>
+                <p>99 999 City</p>
+                <p>0262 00 00 00</p>
+                <p>contact@bonzai-food.com</p>
+            </div>
+            <div class="horaire">
+                <h1>Horaires</h1>
+                <p>Tous les jours</p>
+                <p>12:00 - 14:00</p>
+                <p>19:00 - 23:00</p>
+            </div>
+            <div class="social-media">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <a href="mentionsLegales.html">Mentions légales</a>
+            <p>Crédits images : Unsplash / Image Creator</p>
+            <p>(c) SH 2023</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
