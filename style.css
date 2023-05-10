@@ -439,8 +439,9 @@ footer {
     padding: 1em 0;
 }
 
-footer h4 {
-    font-size: 1rem;
+footer span {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 footer p {
@@ -717,10 +718,9 @@ footer a {
 
     /*FOOTER*/
 
-    footer h1 {
+    footer span {
         font-size: 2rem;
         font-weight: 700;
-        padding: 1em 0;
     }
 
     footer p {
@@ -863,6 +863,11 @@ footer a {
 
     .responsive-slider .navigation {
         bottom: 1em;
+    }
+
+    footer span {
+        font-size: 2rem;
+        font-weight: 700;
     }
 
     footer p {
