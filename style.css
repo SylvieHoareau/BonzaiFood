@@ -87,11 +87,11 @@ nav a {
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: var(--light-gray);
     color: black;
 }
 
-.topnav a.active {
+.topnav a:active {
     background-color: var(--secondary-color);
     color: black;
 }
@@ -105,6 +105,8 @@ nav a {
 .topnav .icon {
     display: none;
 }
+
+/*Présentation du restaurant*/
 
 /*Slider image*/
 .headerImageContainer {
@@ -161,9 +163,8 @@ nav a {
 
 .carousel-controls i {
     padding: 10%;
-    width: 10%;
-    height: 10%;
-    background-color: var(--dark-gray);
+    font-size: 2rem;
+    background-color: none;
     color: white;
 }
 
@@ -189,6 +190,19 @@ nav a {
 
 .carousel-dots .inactive {
     border: 10px solid var(--light-gray);
+}
+
+/*Texte sur les diapos*/
+.text {
+    color: var(--light-gray);
+    background-color: rgba(19,87,32,0.6);
+    font-size: 1rem;
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 6em;
+    padding: 1em;
 }
 
 
@@ -312,7 +326,11 @@ section h1 {
 /*SECTION FORMULAIRE DE RESERVATION*/
 
 .reservation {
-    background-color: var(--light-gray);
+    background-color: var(--dark-gray);
+}
+
+.reservation h1 {
+    color: var(--light-gray);
 }
 
 .form-container {
@@ -337,6 +355,9 @@ form {
 
 label {
     margin: 0em 0em 1em 1em;
+    color: var(--light-gray);
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 input {
@@ -347,18 +368,7 @@ input {
     width: 90%;
     max-width: 100%;
     max-height: min-content;
-}
-
-.day-flex-container {
-    display:flex;
-    flex-direction: row;
-    align-items: baseline;
-    align-content: center;
-    justify-content: space-between;
-    margin: 1em 0;
-    width: 100%;
-    max-width: 100%;
-    max-height: min-content;
+    color: var(--light-gray);
 }
 
 .time-flex-container {
@@ -370,10 +380,6 @@ input {
     width: 100%;
     max-width: 100%;
     max-height: min-content;
-}
-
-input[type="checkbox"] {
-    border-color: var(--primary-color);
 }
 
 .submit-flex-container {
@@ -401,6 +407,8 @@ input[type=submit] {
 input[type=submit]:hover {
     transform: scale(1.5);
 }
+
+/*CONTACT*/
 
 .contact h1 {
     text-align: center;
@@ -477,10 +485,6 @@ footer a {
     margin: 1em;
 }
 
-.adress {
-    margin-top: 1em;
-}
-
 .horaire {
     margin-top: 1em;
 }
@@ -537,11 +541,11 @@ footer a {
     }
 
     .topnavresponsive a:hover {
-        background-color: #ddd;
+        background-color: var(--light-gray);
         color: black;
     }
 
-    .topnavresponsive a.active {
+    .topnavresponsive a:active {
         background-color: var(--secondary-color);
         color: white;
     }
@@ -561,6 +565,8 @@ footer a {
         display: block;
         text-align: left;
     }
+
+
 }
 
 
@@ -624,13 +630,13 @@ footer a {
     }
 
     .topnavresponsive a:hover {
-        background-color: #ddd;
+        background-color: var(--light-gray);
         color: black;
     }
 
-    .topnavresponsive a.active {
+    .topnavresponsive a:active {
         background-color: var(--secondary-color);
-        color: white;
+        color: black;
     }
 
     .topnav.responsive {
@@ -673,6 +679,12 @@ footer a {
         bottom: 1em;
     }
 
+    .responsive-slider .navigation .btn {
+        width: 0.5em;
+        height: 0.5em;
+        margin: 0.1em;
+    }
+
     footer span {
         font-size: 2rem;
         font-weight: 700;
@@ -686,11 +698,7 @@ footer a {
         font-size: 1rem;
     }
 
-    .responsive-slider .navigation .btn {
-        width: 0.5em;
-        height: 0.5em;
-        margin: 0.1em;
-    }
+   
 }
 
 /*RESPONSIVE POUR ECRAN D'ORDINATEURS*/
@@ -742,8 +750,18 @@ footer a {
         font-size: 1rem;
     }
 
+    .topnav a:active {
+        background-color: var(--secondary-color);
+        color: black;
+    }
+
     .topnav a.icon {
         display: none;
+    }
+
+    .topnavresponsive a:active {
+        background-color: var(--secondary-color);
+        color: black;
     }
 
     /*CAROUSEL*/
@@ -767,13 +785,26 @@ footer a {
         background: none;
     }
 
+    /*Texte sur les diapos*/
+    .text {
+        color: var(--light-gray);
+        background-color: rgba(19,87,32,0.6);
+        font-size: 1rem;
+        font-weight: 700;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 1em;
+        padding: 1em;
+    }
+
     /*POUR TOUTES LES SECTIONS*/
 
     section h1 {
         text-align: center;
         padding: 1em;
         text-transform: uppercase;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     /*MENU*/
@@ -877,7 +908,7 @@ footer a {
     }
 
     label {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     input {
@@ -887,11 +918,7 @@ footer a {
         width: 100%;
         max-width: 100%;
         max-height: min-content;
-        font-size: 1.5rem;
-    }
-
-    input[type="checkbox"] {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     input[type="radio"] {
@@ -939,6 +966,13 @@ footer a {
         width: 100%;
     }
 
+    .logo-footer {
+        width: 10%;
+        height: auto;
+        border-radius: 100%;
+        margin: 1em;
+    }
+
     .copyright-container {
         display: flex;
         flex-direction: row;
@@ -948,6 +982,5 @@ footer a {
         color: white;
     }
 }
-
 
 
