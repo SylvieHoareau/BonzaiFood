@@ -9,9 +9,8 @@ function toggleMenu() {
     }
 }
 
-
 //Fonction pour défilement du slider d'images
-//Merci Dev.To - Kabirou Alassane
+//D'après Dev.To - Kabirou Alassane
 (function () {
   // Utilisation de la directive "use strict" pour activer le mode strict en JavaScript
   // Cela implique une meilleure gestion des erreurs et une syntaxe plus stricte pour le code
